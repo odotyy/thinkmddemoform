@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width">
+<title>Form APP</title>
+</head>
+<body>
+ 
+
+  <div id="app">
+    <div class="product">
+      <div class="product.image">
+        <img v-bind:src="image" contain height="150px" width="300px">
+        <p>A link to <a href="https://www.thinkmd.org/" title="ThinkMD" target="_blank">ThinkMD</a>.</p>
+      </div>
+      <div class="product-info">
+        
+        <button v-on:click="clinician" @mouseover="updateProduct(1)">Clin</button>
+        <button v-on:click="toggleproductrev" @mouseover="updateProduct(0)">Engr</button>
+        <button v-on:click="metadata" @mouseover="updateProduct(2)">Meta</button>
+        <button v-on:click="other" @mouseover="updateProduct(3)">Other</button>
+        <metadata v-if="showmetadata"></metadata>
+        <other v-if="showother"></other>
+        <product v-if="showproduct"></product>
+        <clinician v-if="showclinician"></clinician>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <script src= "https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="codes.js"></script>
+
+</body>
+</html>
